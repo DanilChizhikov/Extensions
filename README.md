@@ -27,7 +27,7 @@ Prerequisites:
 1. Navigate to your project's Packages folder and open the manifest.json file.
 2. Add this line below the "dependencies": { line
     - ```json title="Packages/manifest.json"
-      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.1",
+      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.2",
       ```
 UPM should now install the package.
 
@@ -110,6 +110,76 @@ public static partial class VectorExtensions
     public static float SqrMagnitude2D(this Vector3 v1, Vector2 v2);
 }
 ```
+
+ - TypeExtensions
+```csharp
+public static class TypeExtensions
+{
+    /// <summary>Returns non-abstract and non-generic implementations of type.</summary>
+    public static Type[] GetImplementations(this Type baseType);
+
+    /// <summary>Returns implementations of type including non-abstract and non-generic.</summary>
+    public static Type[] GetAllImplementations(this Type baseType);
+
+    /// <summary>Returns types that belong to the base type.</summary>
+    public static Type[] GetAssignableTypes(this Type baseType);
+
+    /// <summary>Returns the type by its name.</summary>
+    public static Type CustomGetType(this string typeName);
+
+    /// <summary>Returns the weight between the original type and its children type.</summary>
+    public static int Comparison(this Type type, Type childrenType);
+}
+```
+
+ - ArrayExtensions
+```csharp
+public static class ArrayExtensions
+{
+    /// <summary>
+    /// <para>Adds an item to the end of the array.</para>
+    /// </summary>
+    /// <param name="item">The item to add to the end of the array. (<paramref name="item" /> can be <see langword="null" /> if T is a reference type.)</param>
+    public static T[] Add<T>(this T[] source, T item);
+
+    /// <summary>
+    /// <para>Adds the elements of the specified collection to the end of the array.</para>
+    /// </summary>
+    /// <param name="collection">The collection whose elements are added to the end of the array.</param>
+    public static T[] AddRange<T>(this T[] source, T[] items);
+
+    /// <summary>
+    /// <para>Determines whether the array contains a specific value.</para>
+    /// </summary>
+    /// <param name="item">The object to locate in the current collection. (<paramref name="item" /> can be <see langword="null" /> if T is a reference type.)</param>
+    public static bool Contains<T>(this T[] source, T item);
+
+    /// <summary>
+    /// <para>Searches for the specified object and returns the zero-based index of the first occurrence within the entire array.</para>
+    /// </summary>
+    /// <param name="item">To be added.</param>
+    public static int IndexOf<T>(this T[] source, T item);
+
+    /// <summary>
+    /// <para>Determines whether every element in the List matches the conditions defined by the specified predicate.</para>
+    /// </summary>
+    /// <param name="match">The predicate delegate that specifies the check against the elements.</param>
+    public static bool TrueForAll<T>(this T[] source, Predicate<T> match);
+
+    /// <summary>
+    /// Return a new copy from source array.
+    /// </summary>
+    /// <returns></returns>
+    public static T[] Copy<T>(this T[] source);
+
+    /// <summary>
+    /// Return a new reverse copy from source array.
+    /// </summary>
+    /// <returns></returns>
+    public static T[] Reverse<T>(this T[] source);
+}
+```
+
 ### Inspector
 
 1. Layers
