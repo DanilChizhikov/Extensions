@@ -48,5 +48,23 @@ namespace MbsCore.Extensions.Runtime
         {
             return (v1 - v2.To2D()).sqrMagnitude;
         }
+
+        public static Vector2 Max(this Vector2 v1, Vector2 v2)
+        {
+            return new Vector2
+                    {
+                            x = Mathf.Max(v1.x, v2.x),
+                            y = Mathf.Max(v1.y, v2.y),
+                    };
+        }
+        
+        public static Vector2 Min(this Vector2 v1, Vector2 v2)
+        {
+            return new Vector2
+                    {
+                            x = Mathf.Min(v1.x, v2.x),
+                            y = Mathf.Min(v1.y, v2.y),
+                    };
+        }
     }
 }

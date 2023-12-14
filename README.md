@@ -27,7 +27,7 @@ Prerequisites:
 1. Navigate to your project's Packages folder and open the manifest.json file.
 2. Add this line below the "dependencies": { line
     - ```json title="Packages/manifest.json"
-      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.2",
+      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.3",
       ```
 UPM should now install the package.
 
@@ -108,6 +108,10 @@ public static partial class VectorExtensions
     public static float Distance2D(this Vector3 v1, Vector2 v2);
     public static float SqrMagnitude2D(this Vector3 v1, Vector3 v2);
     public static float SqrMagnitude2D(this Vector3 v1, Vector2 v2);
+    public static Vector2 Max(this Vector2 v1, Vector2 v2);
+    public static Vector2 Min(this Vector2 v1, Vector2 v2);
+    public static Vector3 Max(this Vector3 v1, Vector3 v2);
+    public static Vector3 Min(this Vector3 v1, Vector3 v2);
 }
 ```
 
