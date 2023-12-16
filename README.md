@@ -27,7 +27,7 @@ Prerequisites:
 1. Navigate to your project's Packages folder and open the manifest.json file.
 2. Add this line below the "dependencies": { line
     - ```json title="Packages/manifest.json"
-      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.4",
+      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.5",
       ```
 UPM should now install the package.
 
@@ -197,7 +197,7 @@ public sealed class LayerAttribute : PropertyAttribute { }
 [Serializable]
 public class ScriptableList<T> : List<T>, ISerializationCallbackReceiver where T : ScriptableObject
 {
-    [SerializeField] private T[] _items = Array.Empty<T>();
+    [SerializeField] private T[] _scriptableObjects = Array.Empty<T>();
     
     public void OnBeforeSerialize();
     public void OnAfterDeserialize();

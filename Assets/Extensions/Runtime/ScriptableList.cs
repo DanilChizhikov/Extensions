@@ -7,17 +7,17 @@ namespace MbsCore.Extensions.Runtime
     [Serializable]
     public class ScriptableList<T> : List<T>, ISerializationCallbackReceiver where T : ScriptableObject
     {
-        [SerializeField] private T[] _items = Array.Empty<T>();
+        [SerializeField] private T[] _scriptableObjects = Array.Empty<T>();
 		
         public void OnBeforeSerialize()
         {
-            _items = ToArray();
+            _scriptableObjects = ToArray();
         }
         
         public void OnAfterDeserialize()
         {
             Clear();
-            AddRange(_items);
+            AddRange(_scriptableObjects);
         }
     }
 }
