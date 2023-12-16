@@ -8,26 +8,26 @@ namespace MbsCore.Extensions.Editor
     {
         private static class TypeController<T> where T : ScriptableObject
         {
-            private static readonly Type ProcessingType = typeof(T);
+            private static readonly Type s_processingType = typeof(T);
 
-            private static string[] _names;
-            private static Type[] _types;
+            private static string[] s_names;
+            private static Type[] s_types;
 
             public static string[] Names
             {
                 get
                 {
-                    if (_names == null)
+                    if (s_names == null)
                     {
                         int count = Types.Length;
-                        _names = new string[count];
+                        s_names = new string[count];
                         for (var i = 0; i < count; i++)
                         {
-                            _names[i] = Types[i].Name;
+                            s_names[i] = Types[i].Name;
                         }
                     }
 
-                    return _names;
+                    return s_names;
                 }
             }
 
@@ -35,12 +35,12 @@ namespace MbsCore.Extensions.Editor
             {
                 get
                 {
-                    if (_types == null)
+                    if (s_types == null)
                     {
-                        _types = ProcessingType.GetAssignableTypes();
+                        s_types = s_processingType.GetAssignableTypes();
                     }
 
-                    return _types;
+                    return s_types;
                 }
             }
 
@@ -60,7 +60,7 @@ namespace MbsCore.Extensions.Editor
 
             private static bool Validate(Type type)
             {
-                return !type.IsAbstract && ProcessingType.IsAssignableFrom(type);
+                return !type.IsAbstract && s_processingType.IsAssignableFrom(type);
             }
         }
     }
