@@ -27,7 +27,7 @@ Prerequisites:
 1. Navigate to your project's Packages folder and open the manifest.json file.
 2. Add this line below the "dependencies": { line
     - ```json title="Packages/manifest.json"
-      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.5",
+      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.6",
       ```
 UPM should now install the package.
 
@@ -181,6 +181,14 @@ public static class ArrayExtensions
     /// </summary>
     /// <returns></returns>
     public static T[] Reverse<T>(this T[] source);
+}
+```
+
+2. GameObject
+```csharp
+public static class GameObjectExtensions
+{
+    public static GameObject SetLayer(this GameObject source, int layer, bool includeChild = false);
 }
 ```
 
