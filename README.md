@@ -27,7 +27,7 @@ Prerequisites:
 1. Navigate to your project's Packages folder and open the manifest.json file.
 2. Add this line below the "dependencies": { line
     - ```json title="Packages/manifest.json"
-      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.6",
+      "com.danilchizhikov.extensions": "https://github.com/DanilChizhikov/Extensions.git?path=Assets/Extensions#0.0.7",
       ```
 UPM should now install the package.
 
@@ -189,6 +189,8 @@ public static class ArrayExtensions
 public static class GameObjectExtensions
 {
     public static GameObject SetLayer(this GameObject source, int layer, bool includeChild = false);
+    public static int GetChildNonAlloc(this GameObject gameObject, ref GameObject[] childGameObjects, bool recursive = false);
+    public static List<GameObject> GetChild(this GameObject gameObject, bool recursive = false);
 }
 ```
 
