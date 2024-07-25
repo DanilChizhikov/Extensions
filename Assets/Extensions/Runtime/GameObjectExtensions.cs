@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MbsCore.Extensions.Runtime
+namespace MbsCore.Extensions
 {
     public static class GameObjectExtensions
     {

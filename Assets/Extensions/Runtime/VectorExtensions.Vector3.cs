@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MbsCore.Extensions.Runtime
+namespace MbsCore.Extensions
 {
     public static partial class VectorExtensions
     {
