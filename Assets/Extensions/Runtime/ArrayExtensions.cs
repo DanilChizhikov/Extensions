@@ -1,6 +1,6 @@
 using System;
 
-namespace MbsCore.Extensions.Runtime
+namespace MbsCore.Extensions
 {
     public static class ArrayExtensions
     {

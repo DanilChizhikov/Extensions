@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MbsCore.Extensions.Runtime
+namespace MbsCore.Extensions
 {
     [Serializable]
     public class ScriptableList<T> : List<T>, ISerializationCallbackReceiver where T : ScriptableObject
