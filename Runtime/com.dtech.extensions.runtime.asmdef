@@ -1,6 +1,6 @@
 {
-    "name": "Extensions.Runtime",
-    "rootNamespace": "MbsCore",
+    "name": "com.dtech.extensions.runtime",
+    "rootNamespace": "DTech",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

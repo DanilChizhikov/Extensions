@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace MbsCore.Extensions
+namespace DTech.Extensions.Runtime
 {
     [AttributeUsage(AttributeTargets.Field)]
     public sealed class LayerAttribute : PropertyAttribute { }

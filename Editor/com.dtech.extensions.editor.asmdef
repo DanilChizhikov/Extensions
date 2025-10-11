@@ -1,6 +1,6 @@
 {
-    "name": "Extensions.Editor",
-    "rootNamespace": "MbsCore",
+    "name": "com.dtech.extensions.editor",
+    "rootNamespace": "DTech",
     "references": [
         "GUID:bf0956da11227458b825a065927c25ef"
     ],

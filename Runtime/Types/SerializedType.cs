@@ -1,4 +1,4 @@
-namespace MbsCore.Extensions.Runtime.Attributes
+namespace DTech.Extensions.Runtime
 {
     public class SerializedType
     {

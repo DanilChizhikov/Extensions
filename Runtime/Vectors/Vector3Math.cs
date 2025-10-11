@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MbsCore.Extensions
+namespace DTech.Extensions.Runtime
 {
     public static class Vector3Math
     {

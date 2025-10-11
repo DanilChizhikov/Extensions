@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace MbsCore.Extensions.Editor
+namespace DTech.Extensions.Editor
 {
     public static class ScriptableObjectUtility
     {

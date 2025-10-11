@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
-namespace MbsCore.Extensions
+namespace DTech.Extensions.Runtime
 {
     public static class GameObjectExtensions
     {
@@ -41,17 +42,29 @@ namespace MbsCore.Extensions
             return childCount;
         }
 
-        public static List<GameObject> GetChild(this GameObject gameObject, bool recursive = false)
+        public static GameObject[] GetChild(this GameObject gameObject, bool recursive = false)
         {
-            var result = new List<GameObject>(gameObject.GetChildEnumerable());
-            if (recursive)
+            List<GameObject> gameObjects = ListPool<GameObject>.Get();
+            gameObjects.Clear();
+            gameObjects.AddRange(gameObject.GetChildEnumerable());
+            List<GameObject> resultGameObjects = ListPool<GameObject>.Get();
+            resultGameObjects.Clear();
+            for (int i = 0; i < gameObjects.Count; i++)
             {
-                for (int i = 0; i < result.Count; i++)
+                GameObject child = gameObjects[i];
+                resultGameObjects.Add(child);
+                if (recursive)
                 {
-                    result.AddRange(result[i].GetChildEnumerable());
+                    resultGameObjects.AddRange(child.GetChild(true));
                 }
             }
 
+            GameObject[] result = resultGameObjects.ToArray();
+            
+            gameObjects.Clear();
+            ListPool<GameObject>.Release(gameObjects);
+            resultGameObjects.Clear();
+            ListPool<GameObject>.Release(resultGameObjects);
             return result;
         }
 

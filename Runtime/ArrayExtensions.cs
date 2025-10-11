@@ -1,6 +1,6 @@
 using System;
 
-namespace MbsCore.Extensions
+namespace DTech.Extensions.Runtime
 {
     public static class ArrayExtensions
     {
@@ -24,7 +24,7 @@ namespace MbsCore.Extensions
         /// <summary>
         /// <para>Adds the elements of the specified collection to the end of the array.</para>
         /// </summary>
-        /// <param name="collection">The collection whose elements are added to the end of the array.</param>
+        /// <param name="items">The collection whose elements are added to the end of the array.</param>
         public static T[] AddRange<T>(this T[] source, T[] items)
         {
             int sourceLength = source.Length;

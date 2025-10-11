@@ -1,4 +1,4 @@
-namespace MbsCore.Extensions.Editor
+namespace DTech.Extensions.Editor.Types
 {
     public class TypeSearchWindowProvider
     {
