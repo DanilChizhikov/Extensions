@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
+using DTech.Extensions.Runtime;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace MbsCore.Extensions.Editor
+namespace DTech.Extensions.Editor
 {
     [CustomPropertyDrawer(typeof(ScriptableList<>))]
     public partial class ScriptableListDrawer : PropertyDrawer

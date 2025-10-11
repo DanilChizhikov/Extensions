@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace MbsCore.Extensions
+namespace DTech.Extensions.Runtime
 {
     public static class TypeExtensions
     {

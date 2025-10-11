@@ -3,7 +3,7 @@ using System.Reflection;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace MbsCore.Extensions.Editor
+namespace DTech.Extensions.Editor
 {
 	public partial class ScriptableListDrawer
 	{

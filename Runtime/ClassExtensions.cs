@@ -1,6 +1,6 @@
 using System;
 
-namespace MbsCore.Extensions
+namespace DTech.Extensions.Runtime
 {
     public static class ClassExtensions
     {

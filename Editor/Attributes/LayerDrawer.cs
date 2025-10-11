@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using DTech.Extensions.Runtime;
 using UnityEditor;
 using UnityEngine;
 
-namespace MbsCore.Extensions.Editor
+namespace DTech.Extensions.Editor.Attributes
 {
     [CustomPropertyDrawer(typeof(LayerAttribute))]
     internal sealed class LayerDrawer : PropertyDrawer
